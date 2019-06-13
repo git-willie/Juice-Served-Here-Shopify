@@ -54,6 +54,8 @@ $bodyFontStack: 'DINPro Regular', sans-serif;
 
 $buttonFontStack: 'DINPro Bold', sans-serif;
 
+$content-spacing: 50px;
+
 
 /*============================================================================
 	#Typography
@@ -72,11 +74,11 @@ p {
 }
 
 h1 {
-	font-size: 50px;
+	font-size: $content-spacing;
 	line-height: (55/50);
 	font-weight: $headerFontWeight;
 	font-family: $headerFontStack;
-	margin: 0 0 50px 0;
+	margin: 0 0 $content-spacing 0;
 	text-transform: uppercase;
 }
 
@@ -84,7 +86,7 @@ h2 {
 	font-size: 30px;
 	font-weight: $headerFontWeight;
 	font-family: $headerFontStack;
-	margin: 0 0 50px 0;
+	margin: 0 0 $content-spacing 0;
 	text-transform: uppercase;
 }
 
@@ -153,5 +155,44 @@ h2 {
 	p {
 		font-size: 18px;
 		line-height: (25/18);
+	}
+}
+
+/*============================================================================
+	#Subscribe section
+==============================================================================*/
+
+.subscribe-section {
+	padding: $content-spacing 0;
+}
+
+.subscribe-section__step {
+	position: relative;
+	margin-top: 30px;
+	margin-bottom: $content-spacing;
+
+	.step-index {
+		font-family: $buttonFontStack;
+		font-size: 150px;
+		line-height: (120/150);
+		color: $orange;
+		letter-spacing: 0;
+		text-align: right;
+		display: block;
+	}
+
+	.step-label {
+		position: absolute;
+		left: 0;
+		top: 35px;
+		text-align: left;
+		width: 80%;
+		text-indent: 2px;
+
+		strong {
+			border-bottom: 1px solid $black;
+			
+			display: block;
+		}	
 	}
 }
