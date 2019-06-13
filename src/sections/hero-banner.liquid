@@ -1,0 +1,51 @@
+<div class="hero-banner" style="background-image: url({{ section.settings.banner | img_url: 'master' }});">
+	<div class="grid-container">
+		<div class="grid-x grid-padding-x">
+			<div class="cell large-5 large-offset-1">
+				{% if section.settings.title != '' %}
+					<div class="h1">{{ section.settings.title }}</div>
+				{% endif %}
+				{% if section.settings.blurb != '' %}
+					<p>{{ section.settings.blurb }}</p>
+				{% endif %}
+				{% if section.settings.button != '' %}
+					<a href="{{ section.settings.button_url }}" class="button">{{ section.settings.button }}</a>
+				{% endif %}
+			</div>
+		</div>
+	</div>	
+</div>
+
+
+{% schema %}
+	{
+		"name": "Hero Banner",
+		"settings": [
+			{
+				"id": "banner",
+				"type": "image_picker",
+				"label": "Banner"
+			},		
+			{
+				"id": "title",
+				"type": "text",
+				"label": "Title"
+			},
+			{
+				"id": "blurb",
+				"type": "text",
+				"label": "Blurb"
+			},
+			{
+				"id": "button",
+				"type": "text",
+				"label": "Button"
+			},
+			{
+				"id": "button_url",
+				"type": "url",
+				"label": "Button URL"
+			}
+		]
+	}
+{% endschema %}

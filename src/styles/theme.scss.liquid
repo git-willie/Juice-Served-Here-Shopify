@@ -30,6 +30,16 @@
 	src: url("{{ 'DINPro-Bold.woff' | asset_url }}") format('woff');
 }
 
+/*============================================================================
+	#Sass Mixins
+==============================================================================*/
+
+@mixin background-cover {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
 /*================ Colors ================*/
 
 $orange: #ff5e48;
@@ -63,6 +73,7 @@ p {
 
 h1 {
 	font-size: 50px;
+	line-height: (55/50);
 	font-weight: $headerFontWeight;
 	font-family: $headerFontStack;
 	margin: 0 0 50px 0;
@@ -91,7 +102,7 @@ h2 {
 .button, button {
 	font-family: $buttonFontStack;
 	display: inline-block;
-	padding: 20px 44px;
+	padding: 10px 44px;
 	width: auto;
 	margin: 0;
 	line-height: (30/15);
@@ -123,5 +134,24 @@ h2 {
 	&:hover {
 		background-color: $orange;
 		color: white;
+	}
+}
+
+/*============================================================================
+	#Banner
+==============================================================================*/
+
+.hero-banner {
+	@include background-cover;
+	height: 540px;
+
+	.h1 {
+		margin-top: 115px;
+		font-size: 48px;
+	}
+
+	p {
+		font-size: 18px;
+		line-height: (25/18);
 	}
 }
