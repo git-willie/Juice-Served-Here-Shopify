@@ -1,0 +1,127 @@
+/**
+ * Insert your styles with Liquid below.
+ *
+ * Import additional stylesheets into this sheet using CSS imports:
+ * @import url('./global/form.scss');
+ */
+
+/*================ Fonts ================*/
+
+@font-face {
+	font-family: 'DINPro Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: url("{{ 'DINPro-Regular.woff' | asset_url }}") format('woff');
+}
+
+
+@font-face {
+	font-family: 'DINPro Medium';
+	font-style: normal;
+	font-weight: normal;
+	src: url("{{ 'DINPro-Medium.woff' | asset_url }}") format('woff');
+}
+
+
+@font-face {
+	font-family: 'DINPro Bold';
+	font-style: normal;
+	font-weight: normal;
+	src: url("{{ 'DINPro-Bold.woff' | asset_url }}") format('woff');
+}
+
+/*================ Colors ================*/
+
+$orange: #ff5e48;
+$black: #231f20;
+
+/*================ General variables ================*/
+
+$headerFontStack: 'DINPro Medium', sans-serif;
+$headerFontWeight: normal;
+
+$bodyFontStack: 'DINPro Regular', sans-serif;
+
+$buttonFontStack: 'DINPro Bold', sans-serif;
+
+
+/*============================================================================
+	#Typography
+==============================================================================*/
+
+body {
+	font-family: $bodyFontStack;
+	font-size: 15px;
+	letter-spacing: 0.02em;
+}
+
+p {
+	font-size: 15px;
+	line-height: (25/15);
+	margin: 0 0 35px 0;
+}
+
+h1 {
+	font-size: 50px;
+	font-weight: $headerFontWeight;
+	font-family: $headerFontStack;
+	margin: 0 0 50px 0;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 30px;
+	font-weight: $headerFontWeight;
+	font-family: $headerFontStack;
+	margin: 0 0 50px 0;
+	text-transform: uppercase;
+}
+
+.h1 { @extend h1; }
+.h2 { @extend h2; }
+.h3 { @extend h3; }
+.h4 { @extend h4; }
+.h5 { @extend h5; }
+.h6 { @extend h6; }
+
+/*============================================================================
+	#Links and Buttons
+==============================================================================*/
+
+.button, button {
+	font-family: $buttonFontStack;
+	display: inline-block;
+	padding: 20px 44px;
+	width: auto;
+	margin: 0;
+	line-height: (30/15);
+	font-weight: normal;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border-radius: 0;
+	border: 1px solid transparent;
+	background-color: $orange;
+	color: white;
+	text-transform: uppercase;
+	&:hover {
+		background-color: white;
+		border: 1px solid $orange;
+		color: $orange;		
+	}
+}
+
+.button-alt {
+	@extend .button;
+	background-color: white;
+	border: 1px solid $orange;
+	color: $orange;
+	&:hover {
+		background-color: $orange;
+		color: white;
+	}
+}
