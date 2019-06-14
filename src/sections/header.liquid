@@ -1,0 +1,97 @@
+<div class="promo-bar">
+	<small>FREE SHIPPING ON YOUR FIRST ORDER AND ANY ORDER OVER $89 <a href="#">Click to see details</a></small>
+</div>
+
+<div class="header">
+	<div class="grid-container">
+		<div class="grid-x grid-padding-x align-middle">
+			<div class="cell large-1">
+				<small>{{ 'Log in' | customer_login_link }}</small>
+			</div>
+			<div class="cell large-3 text-right">
+				<ul class="navigation-menu left-menu">
+					<li class="has-mega-menu">
+						<a href="#">Shop</a>
+						<div class="mega-menu">
+							<div class="grid-container">
+								<div class="grid-x">
+									<div class="cell large-2 large-offset-1">
+										<span>Drinks</span>
+										<ul>
+											<li><a href="#">All</a></li>
+											<li><a href="#">Juices</a></li>
+											<li><a href="#">Smoothies</a></li>
+											<li><a href="#">Cleanse Packs</a></li>
+											<li><a href="#">Shots</a></li>
+											<li><a href="#">Coffee</a></li>
+											<li><a href="#">Water</a></li>
+										</ul>								
+									</div>
+									<div class="cell large-2">
+										<span>Goods</span>
+										<ul>
+											<li><a href="#">All</a></li>
+											<li><a href="#">Teas</a></li>
+											<li><a href="#">Coffees</a></li>
+											<li><a href="#">Vitals</a></li>
+											<li><a href="#">Snacks</a></li>
+										</ul>								
+									</div>
+									<div class="cell large-2">
+										<span>Boxes</span>
+										<ul>
+											<li><a href="#">All</a></li>
+											<li><a href="#">Favorites Box</a></li>
+											<li><a href="#">Sweet Cream Box</a></li>
+											<li><a href="#">Detox Box</a></li>
+											<li><a href="#">Greens Box</a></li>
+										</ul>								
+									</div>
+									<div class="cell large-2">
+										<span>Cleanses</span>
+										<ul>
+											<li><a href="#">All</a></li>
+											<li><a href="#">Soft Cleanse</a></li>
+											<li><a href="#">Semi Cleanse</a></li>
+											<li><a href="#">Hard Cleanse</a></li>
+										</ul>								
+									</div>
+								</div>
+							</div>
+							<div class="mega-menu__image">
+								<img src="{{ 'mm-image.png' | asset_url }}" alt="" />
+							</div>
+						</div>
+					</li>
+					<li><a href="#">Cleanses</a></li>
+					<li><a href="#">Build a Box</a></li>
+				</ul>
+			</div>
+			<div class="cell large-4 text-center">
+				<a href="/"><img src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ shop.name }}"></a>
+			</div>
+			<div class="cell large-3">
+				<ul class="navigation-menu right-menu">
+					<li><a href="#">The Unconventional</a></li>
+					<li><a href="#">Who We Are</a></li>
+				</ul>
+			</div>
+			<div class="cell large-1 text-right">
+				<a href="/cart" class="header__cart-link"><img src="{{ 'icon-cart.png' | asset_url }}" alt="Cart">(2)</a>
+			</div>			
+		</div>
+	</div>
+</div>
+
+{% schema %}
+	{
+		"name": "Header",
+		"settings": [		
+			{
+				"id": "logo",
+				"type": "image_picker",
+				"label": "Logo"
+			}
+		]		
+	}
+{% endschema %}

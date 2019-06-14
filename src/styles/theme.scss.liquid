@@ -202,6 +202,195 @@ a:focus {
 }
 
 /*============================================================================
+	#Header
+==============================================================================*/
+
+.header {
+	padding: 20px 0;
+	position: relative;
+}
+
+.header__cart-link {
+	font-size: 13px;
+	font-weight: $headerFontWeight;
+	font-family: $headerFontStack;	
+
+	img {
+		margin-right: 5px;
+	}
+}
+
+#customer_login_link {
+	color: $black;
+}
+
+.navigation-menu {
+	padding: 0;
+	margin: 0;
+
+	> li {
+		list-style: none;
+		display: inline-block;
+
+
+		> a {
+			color: $black;
+			text-transform: uppercase;
+			font-size: 13px;
+			line-height: (36/13);
+			letter-spacing: 0.05em;
+
+			&:hover {
+				color: $orange;
+			}
+
+		}
+	}
+
+	&.left-menu {
+		> li {
+			margin-left: 20px;
+		}
+	}
+
+	&.right-menu {
+		> li {
+			margin-right: 20px;
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+}
+
+.promo-bar {
+	background-color: $black;
+	color: white;
+	text-align: center;
+	padding: 7px 0;
+
+	a {
+		text-transform: uppercase;
+		font-weight: $headerFontWeight;
+		font-family: $headerFontStack;
+		text-decoration: underline;
+		color: white;	
+	}
+}
+
+.has-mega-menu {
+	&:hover {
+		.mega-menu {
+			display: block;
+		}
+	}
+}
+
+.mega-menu {
+	display: none;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 100%;
+	margin-top: -20px;
+	background-color: white;
+	text-align: left;
+	padding: 40px 0 20px;
+	overflow: hidden;
+
+	span {
+		text-transform: uppercase;
+		font-size: 13px;
+		line-height: (36/13);
+		display: block;
+	}
+
+	ul {
+		margin: 0
+	}
+
+	li {
+		display: block;
+	}
+
+	a {
+		font-size: 13px;
+		line-height: (36/13);
+		text-transform: none;
+		color: $black;
+
+		&:hover {
+			color: $orange;
+		}
+	}
+}
+
+.mega-menu__image {
+	position: absolute;
+	right: 0;
+	top: 20px;
+	width: 33%;
+	height: 100%;
+	background-color: #fbfbfb;
+	img {
+		height: 100%;
+	}
+}
+
+/*============================================================================
+	#Footer
+==============================================================================*/
+
+.footer {
+	border-top: 1px solid #e1e1e1;
+	padding: $content-spacing 0 0 0;
+
+	.input-group {
+		max-width: 400px;
+	}
+
+	.input-group-button {
+		margin-left: 15px;
+	}
+
+	strong {
+		text-transform: uppercase;
+		display: block;
+		margin-bottom: 30px;
+	}
+
+	ul {
+		margin: 0 0 $content-spacing 0;
+		padding: 0;
+
+		li {
+			list-style: none;
+		}
+
+		a {
+			color: $black;
+
+			&:hover {
+				color: $orange;
+			}
+		}
+	}
+}
+
+.footer__bottom {
+	background-color: #f9f9f9;
+	border-top: 1px solid #e1e1e1;
+	padding: 20px 0;
+	color: #999596;
+
+	a {
+		font-size: 13px;
+		margin-left: 30px;
+		color: #999596;
+	}
+}
+
+/*============================================================================
 	#Banner
 ==============================================================================*/
 
