@@ -5,10 +5,11 @@
 <div class="header">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x align-middle">
-			<div class="cell large-1">
-				<small>{{ 'Log in' | customer_login_link }}</small>
+			<div class="cell large-1 medium-4 small-2">
+				<button type="button" class="button mobile-menu-button" data-toggle="mobile-menu"><span></span><span></span><span></span></button>
+				<small class="show-for-medium">{{ 'Log in' | customer_login_link }}</small>
 			</div>
-			<div class="cell large-3 text-right">
+			<div class="cell large-3 text-right show-for-large">
 				<ul class="navigation-menu left-menu">
 					<li class="has-mega-menu">
 						<a href="#">Shop</a>
@@ -67,16 +68,16 @@
 					<li><a href="#">Build a Box</a></li>
 				</ul>
 			</div>
-			<div class="cell large-4 text-center">
+			<div class="cell medium-4 large-4 small-8 text-center">
 				<a href="/"><img src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ shop.name }}"></a>
 			</div>
-			<div class="cell large-3">
+			<div class="cell large-3 show-for-large">
 				<ul class="navigation-menu right-menu">
 					<li><a href="#">The Unconventional</a></li>
 					<li><a href="#">Who We Are</a></li>
 				</ul>
 			</div>
-			<div class="cell large-1 text-right">
+			<div class="cell medium-4 large-1 small-2 text-right">
 				<a href="/cart" class="header__cart-link"><img src="{{ 'icon-cart.png' | asset_url }}" alt="Cart">(2)</a>
 			</div>			
 		</div>
