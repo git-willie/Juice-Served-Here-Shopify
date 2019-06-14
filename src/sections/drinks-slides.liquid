@@ -1,0 +1,76 @@
+<div class="slideshow">
+	{% for block in section.blocks %}
+		<div class="slideshow__slide" style="background-image:url({{ block.settings.banner | img_url: 'master' }});">
+			<div class="grid-container">
+				<div class="grid-x grid-padding-x align-center text-center">
+					<div class="cell large-4 medium-6 small-10">
+						<div class="h1">Drinks</div>
+						<div class="dash"></div>
+						{% if block.settings.title %}
+							<h2>{{ block.settings.title }}</h2>
+						{% endif %}
+						{% if block.settings.blurb %}
+							<p>{{ block.settings.blurb }}</p>
+						{% endif %}
+						{% if block.settings.button %}
+							<a class="button-alt" href="{{ block.settings.button_url }}">{{ block.settings.button }}</a>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>
+
+{% schema %}
+	{
+		"name": "Slides",
+		"max_blocks": 3,
+		"blocks": [
+			{
+				"type": "image",
+				"name": "Slide",
+				"settings": [
+					{
+						"id": "banner",
+						"type": "image_picker",
+						"label": "Banner"
+					},		
+					{
+						"id": "title",
+						"type": "text",
+						"label": "Title"
+					},
+					{
+						"id": "blurb",
+						"type": "text",
+						"label": "Blurb"
+					},
+					{
+						"id": "button",
+						"type": "text",
+						"label": "Button"
+					},
+					{
+						"id": "button_url",
+						"type": "url",
+						"label": "Button URL"
+					}
+				]				
+			}
+		]
+	}
+{% endschema %}
+
+<script type="text/javascript">
+	$(function() {
+		$('.slideshow').slick({
+			dots: true,
+			arrows: false,
+			infinite: false,
+			speed: 500,
+			fade: true,
+			cssEase: 'linear',		
+		});
+	});	
+</script>

@@ -1,0 +1,60 @@
+<div class="banner" style="background-image: url({{ section.settings.banner | img_url: 'master' }});">
+	<div class="grid-container">
+		<div class="grid-x grid-padding-x align-center text-center">
+			<div class="cell large-6">
+				{% if section.settings.title != '' %}
+					<div class="h1">{{ section.settings.title }}</div>
+				{% endif %}
+				<div class="dash"></div>
+				{% if section.settings.sub-title != '' %}
+					<div class="h2">{{ section.settings.sub-title }}</div>
+				{% endif %}
+				{% if section.settings.blurb != '' %}
+					<p>{{ section.settings.blurb }}</p>
+				{% endif %}
+				{% if section.settings.button != '' %}
+					<a href="{{ section.settings.button_url }}" class="button-alt">{{ section.settings.button }}</a>
+				{% endif %}
+			</div>
+		</div>
+	</div>	
+</div>
+
+
+{% schema %}
+	{
+		"name": "Featured collection",
+		"settings": [
+			{
+				"id": "banner",
+				"type": "image_picker",
+				"label": "Banner"
+			},		
+			{
+				"id": "title",
+				"type": "text",
+				"label": "Title"
+			},
+			{
+				"id": "sub-title",
+				"type": "text",
+				"label": "Sub title"
+			},
+			{
+				"id": "blurb",
+				"type": "text",
+				"label": "Blurb"
+			},
+			{
+				"id": "button",
+				"type": "text",
+				"label": "Button"
+			},
+			{
+				"id": "button_url",
+				"type": "url",
+				"label": "Button URL"
+			}
+		]
+	}
+{% endschema %}
